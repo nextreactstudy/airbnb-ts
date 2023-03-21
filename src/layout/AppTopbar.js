@@ -20,16 +20,6 @@ const AppTopbar = forwardRef((props, ref) => {
         topbarmenubutton: topbarmenubuttonRef.current
     }));
 
-
-
-    const onChange = (value) => {
-        console.log(`selected ${value}`);
-    };
-    const onSearch = (value) => {
-        console.log('search:', value);
-    };
-
-
     return (
         <div className="layout-topbar">
             {/* <div className='layout-topbar-inner'> */}
@@ -37,7 +27,8 @@ const AppTopbar = forwardRef((props, ref) => {
                     <div className="layout-topbar-logo">
                         <>
                             <img src={`${contextPath}/layout/images/ABNB_BIG.svg`} width="107.22px" height={'40px'} widt={'true'} alt="logo" />
-                            <span className='ir'>pims</span>
+                            <img src={`${contextPath}/layout/images/ABNB.svg`} width="37.22px" height={'30px'} widt={'true'} alt="logo" />
+                            <span className='ir'>airbnb</span>
                         </>
                     </div>
                 </Link>
