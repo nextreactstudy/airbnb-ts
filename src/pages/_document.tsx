@@ -16,6 +16,7 @@ class MyDocument extends Document {
     return (
       <Html lang="ko">
         <Head>
+          <link id="theme-css" href={`${contextPath}/themes/tailwind-light/theme.css`} rel="stylesheet"></link>
         </Head>
         <body>
           <Main />

@@ -36,7 +36,7 @@ const AppTopbar = forwardRef((props, ref) => {
                 <Link href="/">
                     <div className="layout-topbar-logo">
                         <>
-                            <img src={`${contextPath}/layout/images/logo-main.svg`} width="177.22px" height={'40px'} widt={'true'} alt="logo" />
+                            <img src={`${contextPath}/layout/images/ABNB_BIG.svg`} width="107.22px" height={'40px'} widt={'true'} alt="logo" />
                             <span className='ir'>pims</span>
                         </>
                     </div>
@@ -44,9 +44,14 @@ const AppTopbar = forwardRef((props, ref) => {
                 <div>인풋이 들어갈거야</div>
 
 
-                <button ref={topbarmenubuttonRef} type="button" className="p-link layout-topbar-menu-button layout-topbar-button" onClick={showProfileSidebar}>
+                {/* <button ref={topbarmenubuttonRef} type="button" className="p-link layout-topbar-menu-button layout-topbar-button" onClick={showProfileSidebar}>
                     <i className="pi pi-ellipsis-v" />
-                </button>
+                </button> */}
+                <div className='layout-topbar-menu'>
+                    <button type="button" className="p-link layout-topbar-button" >당신의</button>
+                    <button type="button" className="p-link layout-topbar-button" >당신의</button>
+                    <button type="button" className="p-link layout-topbar-button" >당신의</button>
+                </div>
 
                 <div ref={topbarmenuRef} className={classNames('layout-topbar-menu', { 'layout-topbar-menu-mobile-active': layoutState.profileSidebarVisible })}>
                     <Link href="/auth/login">
