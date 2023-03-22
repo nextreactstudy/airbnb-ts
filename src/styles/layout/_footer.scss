@@ -1,8 +1,41 @@
 .layout-footer {
+    font-size: 14px !important;
+    position: fixed;
+    z-index: 997;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
     transition: margin-left $transitionDuration;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 1rem;
+    padding: 0 80px;
     border-top: 1px solid var(--surface-border);
+
+    .layout-footer-inner {
+        padding: 13px 0;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        justify-content: space-between;
+
+        .footer-inner-left {
+            a {
+                // color: #666;
+                margin: 0 5px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .layout-footer-bottom {
+        padding-top: 1px;
+        font-size: 10px;
+        padding-bottom: 8px;
+    }
+}
+
+.bidbd {
+    height: 200px;
+    background: rgb(182, 182, 248);
 }
