@@ -35,6 +35,10 @@
                 white-space: nowrap;
                 justify-content: space-between;
                 box-sizing: border-box;
+
+                &:hover {
+                    text-decoration: underline;
+                }
                 svg {
                     margin: 0 4px;
                 }
@@ -47,9 +51,9 @@
     }
 
     .layout-footer-bottom {
-        padding-top: 1px;
+        // padding-top: 5px;
         font-size: 10px;
-        padding-bottom: 8px;
+        padding: 8px 0;
     }
 }
 

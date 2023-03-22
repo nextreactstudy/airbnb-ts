@@ -17,21 +17,21 @@ const AppFooter = () => {
             <div className="layout-footer-inner">
                 <div className="footer-inner-left">
                     <span>© 2023 Airbnb, Inc.</span>
-                    <Link href={"./"}>
+                    <Link href={"/help/article"}>
                         <span>개인정보 처리방침</span>
                     </Link>
-                    <Link href={"./"}>
+                    <Link href={"/help/service"}>
                         <span>이용약관</span>
                     </Link>
                     <span>.</span>
 
-                    <Link href={"./"}>
+                    <Link href={"/sitemaps"}>
                         <span>사이트맵</span>
                     </Link>
-                    <Link href={"./"}>
+                    <Link href={"/home/policy"}>
                         <span>한국의 변경된 환불 정책</span>
                     </Link>
-                    <Link href={"./"}>
+                    <Link href={"/about/company-details"}>
                         <span>회사 세부정보</span>
                     </Link>
                 </div>
