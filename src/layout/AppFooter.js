@@ -35,19 +35,28 @@ const AppFooter = () => {
                         <span>회사 세부정보</span>
                     </Link>
                 </div>
-                <div>
-                    <span>
-                        <HiOutlineGlobeAlt size={16} />
+                <div className="footer-inner-right">
+                    <button
+                        type="button"
+                        className="p-link layout-footer-button"
+                    >
+                        <HiOutlineGlobeAlt size={17} />
                         한국어 (KR)
-                    </span>
-                    <span>
-                        <BiWon size={16} />
+                    </button>
+                    <button
+                        type="button"
+                        className="p-link layout-footer-button"
+                    >
+                        <BiWon size={17} />
                         KRW
-                    </span>
-                    <span>
+                    </button>
+                    <button
+                        type="button"
+                        className="p-link layout-footer-button"
+                    >
                         지원 및 참고 자료
-                        <IoIosArrowUp />
-                    </span>
+                        <IoIosArrowUp size={17} />
+                    </button>
                 </div>
             </div>
             <div className="layout-footer-bottom">

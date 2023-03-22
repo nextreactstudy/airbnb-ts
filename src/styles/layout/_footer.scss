@@ -26,6 +26,24 @@
                 }
             }
         }
+
+        .footer-inner-right {
+            display: flex;
+            button {
+                display: flex;
+                align-items: center;
+                white-space: nowrap;
+                justify-content: space-between;
+                box-sizing: border-box;
+                svg {
+                    margin: 0 4px;
+                }
+            }
+            .layout-footer-button {
+                padding: 0 7px;
+                font-weight: 500;
+            }
+        }
     }
 
     .layout-footer-bottom {
