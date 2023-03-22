@@ -21,10 +21,12 @@ const Layout = (props) => {
             type: "click",
             listener: (event) => {
                 const isOutsideClicked = !(
-                    sidebarRef.current.isSameNode(event.target) ||
-                    sidebarRef.current.contains(event.target) ||
-                    topbarRef.current.menubutton.isSameNode(event.target) ||
-                    topbarRef.current.menubutton.contains(event.target)
+                    // sidebarRef.current.isSameNode(event.target) ||
+                    (
+                        sidebarRef.current.contains(event.target) ||
+                        topbarRef.current.menubutton.isSameNode(event.target) ||
+                        topbarRef.current.menubutton.contains(event.target)
+                    )
                 );
 
                 if (isOutsideClicked) {
