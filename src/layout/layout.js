@@ -104,15 +104,15 @@ const Layout = (props) => {
     return (
         <React.Fragment>
             <Head>
-                <title>Layout</title>
+                <title>여행은 떠나는거야 - 에어비앤비</title>
                 <meta charSet="UTF-8" />
-                <meta name="description" content="The ultimate collection of design-agnostic, flexible and accessible React UI Components." />
+                <meta name="description" content="The next React Clonecoding Study." />
                 <meta name="robots" content="index, follow" />
                 <meta name="viewport" content="initial-scale=1, width=device-width" />
                 <meta property="og:type" content="website"></meta>
                 <meta property="og:title" content="NextJS"></meta>
                 <meta property="og:ttl" content="604800"></meta>
-                <link rel="icon" href={`${contextPath}/favicon.ico`} type="image/x-icon"></link>
+                <link rel="icon" href={`${contextPath}/layout/images/ABNB.svg`} type="image/x-icon"></link>
             </Head>
 
             <div className={containerClass}>
