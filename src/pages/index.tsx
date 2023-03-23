@@ -1,12 +1,10 @@
-const IndexPage = () => {
+import { MainContainer } from "@/features/main";
+
+const MainPage = () => {
     return (
         <>
-            <div className="bidbd">메인페이지</div>
-            <div className="bidbd">메인페이지</div>
-            <div className="bidbd">메인페이지</div>
-            <div className="bidbd">메인페이지</div>
-            <div className="bidbd">메인페이지</div>
+            <MainContainer />
         </>
     );
 };
-export default IndexPage;
+export default MainPage;
