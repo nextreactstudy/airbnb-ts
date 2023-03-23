@@ -103,8 +103,8 @@ const MainContainer = () => {
     ];
 
     return (
-        <div className="grid">
-            <TabView className="col-12 xl:col-9" scrollable>
+        <div className="grid justify-content-between">
+            <TabView className="col-11" scrollable>
                 {tabs.map((tab) => {
                     return (
                         <TabPanel key={tab.title} header={tab.title}>
@@ -113,7 +113,7 @@ const MainContainer = () => {
                     );
                 })}
             </TabView>
-            <div className="card">ddd</div>
+            <div className="col-1">ddd</div>
         </div>
     );
 };
