@@ -40,7 +40,7 @@ const MainSearch = () => {
             <div className="grid col-12 xl:col-12">
                 {data?.map((li) => {
                     return (
-                        <div className="col-2 border-1">
+                        <div className="col-2 border-1" key={li.이름}>
                             <div>{li.사진}</div>
                             <h4>{li.이름}</h4>
                         </div>
