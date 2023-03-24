@@ -7,6 +7,14 @@ import {
 
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
+import { Spin } from "antd";
+
+// 장소
+// 별점
+// 전망
+// 시작일
+// 종료일
+// 금액
 
 const MainSearch = () => {
     const [getCamp, { data: CampList, isFetching }] = useLazyGetCampListQuery();
@@ -24,19 +32,21 @@ const MainSearch = () => {
     return (
         <>
             <button onClick={handleGetReview}>msw 확인용</button>
-            <DataTable
-                value={data}
-                loading={isFetching}
-                selectionMode="checkbox"
-                selection={selectedDatas}
-                onSelectionChange={(e) => setSelectedDatas(e.value)}
-                paginator
-                rows={5}
-            >
-                <Column field="사진" header="사진" />
-                <Column field="금액" header="금액" />
-                <Column field="별점" header="별점" />
-            </DataTable>
+            <button onClick={handleGetReview}>msw 확인용</button>
+            <button onClick={handleGetReview}>msw 확인용</button>
+            <button onClick={handleGetReview}>msw 확인용</button>
+            <button onClick={handleGetReview}>msw 확인용</button>
+            <button onClick={handleGetReview}>msw 확인용</button>
+            <div className="grid">
+                {data?.map((li) => {
+                    return (
+                        <div className="col-3 border">
+                            <div>{li.사진}</div>
+                            <h4>{li.이름}</h4>
+                        </div>
+                    );
+                })}
+            </div>
         </>
     );
 };
