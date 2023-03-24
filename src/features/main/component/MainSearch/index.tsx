@@ -37,10 +37,10 @@ const MainSearch = () => {
             <button onClick={handleGetReview}>msw 확인용</button>
             <button onClick={handleGetReview}>msw 확인용</button>
             <button onClick={handleGetReview}>msw 확인용</button>
-            <div className="grid">
+            <div className="grid col-12 xl:col-12">
                 {data?.map((li) => {
                     return (
-                        <div className="col-3 border">
+                        <div className="col-2 border-1">
                             <div>{li.사진}</div>
                             <h4>{li.이름}</h4>
                         </div>
