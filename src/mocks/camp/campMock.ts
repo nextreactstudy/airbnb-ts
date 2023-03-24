@@ -1,17 +1,15 @@
 interface ISearchResList {
-    list: {
-        사진?: string;
-        이름?: string;
-        장소?: string;
-        별점?: string;
-        전망?: string;
-        시작일?: string;
-        종료일?: string;
-        금액?: string;
-    };
+    사진?: string;
+    이름?: string;
+    장소?: string;
+    별점?: string;
+    전망?: string;
+    시작일?: string;
+    종료일?: string;
+    금액?: string;
 }
 
-const data = [
+export const mockCampRes: ISearchResList[] = [
     {
         사진: "사진1",
         이름: "이름",
@@ -43,7 +41,3 @@ const data = [
         금액: "일무개3",
     },
 ];
-
-export const mockCampRes = {
-    list: data,
-};

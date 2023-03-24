@@ -2,7 +2,7 @@ import { rest } from "msw";
 import { mockCampRes } from "./campMock";
 
 export const campHandlers = [
-    rest.get<any[]>("/campSearch", (req, res, ctx) => {
+    rest.get<any[]>("http://localhost:12300/campSearch", (req, res, ctx) => {
         return res(ctx.json(mockCampRes));
     }),
 ];
