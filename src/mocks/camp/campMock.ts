@@ -1,4 +1,4 @@
-interface ISearchResList {
+export default interface ISearchResList {
     사진?: string;
     이름?: string;
     장소?: string;

@@ -1,5 +1,8 @@
-import type { InferGetServerSidePropsType } from "next";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import {
+    useGetCampListQuery,
+    useLazyGetCampListQuery,
+} from "../../redux/mainApi";
 
 interface Product {
     id: string;
@@ -14,12 +17,14 @@ interface Review {
 }
 
 const MainSearch = () => {
-    const [reviews, setReviews] = useState<Review[]>([]);
+    const [getCamp, { data: CampList }] = useLazyGetCampListQuery();
+
+    useEffect(() => {
+        console.log(CampList);
+    }, [CampList]);
 
     const handleGetReview = () => {
-        fetch("http://localhost:12300/campSearch")
-            .then((res) => res.json())
-            .then(setReviews);
+        getCamp();
     };
 
     return (
