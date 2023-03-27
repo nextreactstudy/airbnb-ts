@@ -11,7 +11,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.02), 0px 0px 2px rgba(0, 0, 0, 0.05), 0px 1px 4px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.02), 0px 0px 2px rgba(0, 0, 0, 0.05),
+        0px 1px 4px rgba(0, 0, 0, 0.08);
 
     .layout-topbar-logo {
         color: var(--surface-900);
@@ -38,17 +39,39 @@
         flex: 0 0 auto;
         display: flex;
         align-items: center;
-        .top-settings {
-            border-radius: 50%;
-        }
-        .top-profiles {
-        }
-        button {
+
+        .layout-topbar-button {
             padding: 12px;
 
+            &:hover {
+                background: rgb(113, 113, 113, 0.1);
+                border-radius: 30px;
+            }
+        }
+
+        .top-settings {
+            border-radius: 50%;
+            padding: 13px 15px;
+
+            &:hover {
+                background: rgb(113, 113, 113, 0.1);
+            }
+        }
+        .top-profiles {
+            border: 1px solid #dddddd;
+            border-radius: 21px;
+            padding: 5px 5px 5px 12px;
+            margin-left: 3px;
+            transition: box-shadow 0.2s ease;
+
+            &:hover {
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+            }
+        }
+        button {
             a {
                 font-weight: bolder;
-                padding: 5px 15px;
+                // padding: 5px 15px;
             }
         }
     }

@@ -89,11 +89,14 @@ const AppTopbar = forwardRef((props, ref) => {
                     <Link href="/">당신의공간을 에어비엔비하세요</Link>
                 </button>
                 <button type="button" className="p-link top-settings">
-                    <HiOutlineGlobeAlt size={17} />
+                    <HiOutlineGlobeAlt size={20} />
                 </button>
-                <button type="button" className="p-link top-profiles">
-                    <HiBars3 sizw={17} />
-                    <HiUserCircle size={20} />
+                <button
+                    type="button"
+                    className="p-link top-profiles flex align-items-center"
+                >
+                    <HiBars3 size={20} fill="#717171" />
+                    <HiUserCircle size={28} className="ml-3" fill="#717171" />
                 </button>
             </div>
         </div>
