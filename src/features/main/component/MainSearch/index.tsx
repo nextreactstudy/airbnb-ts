@@ -9,6 +9,9 @@ import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { Spin } from "antd";
 
+import { TabView, TabPanel } from "primereact/tabview";
+import { Button } from "primereact/button";
+
 // 장소
 // 별점
 // 전망
@@ -21,6 +24,8 @@ const MainSearch = () => {
     const [data, setData] = useState<ISearchResList[]>();
     const [selectedDatas, setSelectedDatas] = useState([]);
 
+    // 탭버튼
+
     useEffect(() => {
         setData(CampList);
     }, [CampList]);
@@ -31,21 +36,9 @@ const MainSearch = () => {
 
     return (
         <>
-            <button onClick={handleGetReview}>msw 확인용</button>
-            <button onClick={handleGetReview}>msw 확인용</button>
-            <button onClick={handleGetReview}>msw 확인용</button>
-            <button onClick={handleGetReview}>msw 확인용</button>
-            <button onClick={handleGetReview}>msw 확인용</button>
-            <button onClick={handleGetReview}>msw 확인용</button>
-            <div className="grid col-12 xl:col-12">
-                {data?.map((li) => {
-                    return (
-                        <div className="col-2 border-1" key={li.이름}>
-                            <div>{li.사진}</div>
-                            <h4>{li.이름}</h4>
-                        </div>
-                    );
-                })}
+            <div className="grid justify-content-between">
+                <div className="col-11 surface-700">ddd</div>
+                <div className="col-0 surface-200">filter</div>
             </div>
         </>
     );

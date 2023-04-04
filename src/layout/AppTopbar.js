@@ -7,6 +7,7 @@ import React, {
     useContext,
     useImperativeHandle,
     useRef,
+    useState,
 } from "react";
 import { LayoutContext } from "./context/layoutcontext";
 
@@ -15,6 +16,8 @@ import { HiOutlineGlobeAlt } from "react-icons/hi";
 import { HiBars3, HiUserCircle } from "react-icons/hi2";
 
 import { Select } from "antd";
+
+import LoginModal from "@/modal/LoginModal";
 
 const AppTopbar = forwardRef((props, ref) => {
     const { layoutConfig, layoutState, onMenuToggle, showProfileSidebar } =
@@ -30,37 +33,54 @@ const AppTopbar = forwardRef((props, ref) => {
         topbarmenubutton: topbarmenubuttonRef.current,
     }));
 
-    return (
-        <div className="layout-topbar">
-            {/* <div className='layout-topbar-inner'> */}
-            <div className="layout-topbar-logo">
-                <Link href="/">
-                    <>
-                        <img
-                            src={`${contextPath}/layout/images/ABNB_BIG.svg`}
-                            width="107.22px"
-                            height={"40px"}
-                            widt={"true"}
-                            alt="logo"
-                        />
-                        {/* <img src={`${contextPath}/layout/images/ABNB.svg`} width="37.22px" height={'30px'} widt={'true'} alt="logo" /> */}
-                        <span className="ir">airbnb</span>
-                    </>
-                </Link>
-            </div>
-            <div className="layout-topbar-menu">
-                <button type="button" className="p-link layout-topbar-button">
-                    당신의
-                </button>
-                <button type="button" className="p-link layout-topbar-button">
-                    당신의
-                </button>
-                <button type="button" className="p-link layout-topbar-button">
-                    당신의
-                </button>
-            </div>
+    const [visible, setVisible] = useState(false);
 
-            {/* <div
+    // 로그인 모달
+    const onSearchLogin = () => {
+        setVisible(true);
+    };
+
+    return (
+        <>
+            <div className="layout-topbar">
+                {/* <div className='layout-topbar-inner'> */}
+                <div className="layout-topbar-logo">
+                    <Link href="/">
+                        <>
+                            <img
+                                src={`${contextPath}/layout/images/ABNB_BIG.svg`}
+                                width="107.22px"
+                                height={"40px"}
+                                widt={"true"}
+                                alt="logo"
+                            />
+                            {/* <img src={`${contextPath}/layout/images/ABNB.svg`} width="37.22px" height={'30px'} widt={'true'} alt="logo" /> */}
+                            <span className="ir">airbnb</span>
+                        </>
+                    </Link>
+                </div>
+                <div className="layout-topbar-menu">
+                    <button
+                        type="button"
+                        className="p-link layout-topbar-button"
+                    >
+                        당신의
+                    </button>
+                    <button
+                        type="button"
+                        className="p-link layout-topbar-button"
+                    >
+                        당신의
+                    </button>
+                    <button
+                        type="button"
+                        className="p-link layout-topbar-button"
+                    >
+                        당신의
+                    </button>
+                </div>
+
+                {/* <div
                 ref={topbarmenuRef}
                 className={classNames("layout-topbar-menu", {
                     "layout-topbar-menu-mobile-active":
@@ -84,22 +104,33 @@ const AppTopbar = forwardRef((props, ref) => {
                     </button>
                 </Link>
             </div> */}
-            <div className="layout-topbar-profile">
-                <button type="button" className="p-link layout-topbar-button">
-                    <Link href="/">당신의공간을 에어비엔비하세요</Link>
-                </button>
-                <button type="button" className="p-link top-settings">
-                    <HiOutlineGlobeAlt size={20} />
-                </button>
-                <button
-                    type="button"
-                    className="p-link top-profiles flex align-items-center"
-                >
-                    <HiBars3 size={20} fill="#717171" />
-                    <HiUserCircle size={28} className="ml-3" fill="#717171" />
-                </button>
+                <div className="layout-topbar-profile">
+                    <button
+                        type="button"
+                        className="p-link layout-topbar-button"
+                    >
+                        <Link href="/">당신의공간을 에어비엔비하세요</Link>
+                    </button>
+                    <button type="button" className="p-link top-settings">
+                        <HiOutlineGlobeAlt size={20} />
+                    </button>
+                    <button
+                        type="button"
+                        className="p-link top-profiles flex align-items-center"
+                        onClick={onSearchLogin}
+                    >
+                        <HiBars3 size={20} fill="#717171" />
+                        <HiUserCircle
+                            size={28}
+                            className="ml-3"
+                            fill="#717171"
+                        />
+                    </button>
+                </div>
             </div>
-        </div>
+
+            <LoginModal visible={visible} setVisible={setVisible} />
+        </>
     );
 });
 

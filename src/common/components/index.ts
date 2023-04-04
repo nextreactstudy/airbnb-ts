@@ -13,3 +13,5 @@ export { AppCodeInput, default as Input, Password, Search } from "./Input";
 export * from "./Form";
 
 export * from "./Loader";
+
+export { default as LoginButton } from "./LoginButton";
